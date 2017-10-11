@@ -2,7 +2,7 @@
 ## Database
 * Used MySQL to ease querying (as compared to NoSQL solutions)  
 * Added indexes to relevant columns to speedup lookup
-* Uploaded data to the table using a PHP script
+* Uploaded data to the table using a [PHP script](https://github.com/boris93/bain/blob/master/util/dataUploader.php)
 * [PhpMyAdmin](http://35.199.63.1/phpmyadmin) => username: bain, password: password
 
 ## Backend
