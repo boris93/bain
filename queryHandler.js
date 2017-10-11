@@ -3,6 +3,7 @@ const sql = require(__dirname + '/sql');
 const pageSize = 20;
 
 const columnMapper = {
+	
 	c2dMappings : {
 		'id' : 'id', 
 		'name' : 'Provider Name',
@@ -16,18 +17,23 @@ const columnMapper = {
 		'average_total_payments' : 'Average Total Payments',
 		'average_medicare_payments' : 'Average Medicare Payments',
 	},
+	
 	d2cMappings : {},
+	
 	init: () => {
 		Object.keys(columnMapper.c2dMappings).forEach(key => {
 			columnMapper.d2cMappings[columnMapper.c2dMappings[key]] = key;		
 		});
 	},
+	
 	mapColumnToDisplay: (column) => {
 		return columnMapper.c2dMappings[column];
 	},
+	
 	mapDisplayToColumn: (display) => {
 		return columnMapper.d2cMappings[display];
 	}
+	
 }
 columnMapper.init();
 
@@ -58,6 +64,7 @@ function getQueryClause(param, value){
 }
 
 module.exports = {
+	
 	parse : function(requestObject){
 		var selectedColumns = [];
 		Object.keys(requestObject).forEach(key =>{
@@ -78,6 +85,7 @@ module.exports = {
 		
 		return "select " + selectPart + " from provider " + wherePart + " order by id asc limit " + limit;
 	},
+	
 	execute : function(queryString, callback){
 		sql.query(queryString, (err, rows) => {
 			if(err) callback(err);
@@ -89,5 +97,10 @@ module.exports = {
 				return mappedRow;
 			}));
 		});
+	},
+	
+	getFields: function(){
+		return Object.keys(columnMapper.d2cMappings);	
 	}
+	
 }

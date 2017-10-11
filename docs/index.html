@@ -6,7 +6,7 @@
 <body>
 	<div class="container-fluid"><br /></div>
 	<div class="container">
-		<form class="form-horizontal" action="javascript:void()">
+		<form class="form-horizontal" action="javascript:void(0);">
 			<div class="form-group">
 				<label class="control-label col-xs-6" for="max_discharges">The maximum number of Total Discharges:</label>
 				<div class="col-xs-6">
@@ -53,7 +53,9 @@
 				<div class="col-xs-offset-6 col-xs-6">
 					<button id=search class="btn btn-default">Submit</button>
 				</div>
+				<div id=query-display class="col-xs-12">Created query: GET /providers?<span></span></div>
 			</div>
+			<div class="col-xs-12" id=column-selector></div>
 		</form> 
 	</div>
 	<div class="container" id="results">

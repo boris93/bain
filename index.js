@@ -15,6 +15,11 @@ app.get('/providers', (req, res) => {
 	});
 });
 
+app.get('/fields', (req, res) => {
+	res.send(queryHandler.getFields());
+});
+
+
 server = app.listen(PORT, () => {
 	console.log(`App listening on port ${PORT}`);
 });
