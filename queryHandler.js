@@ -78,11 +78,11 @@ module.exports = {
 			var clause = getQueryClause(key, requestObject[key]);
 			if(clause) whereClauses.push(clause);
 		});
-		var wherePart = whereClauses.length > 0 ? "where " + whereClauses.join(' and ') : "";
+		var wherePart = whereClauses.length > 0 ? " where " + whereClauses.join(' and ') : "";
 	
-		var limit = ((requestObject.pageNum || 0)*pageSize) + "," + pageSize;
+		var limit = ((parseInt(requestObject.pageNum) || 0)*pageSize) + "," + pageSize;
 		
-		return "select " + selectPart + " from provider " + wherePart + " order by id asc limit " + limit;
+		return "select " + selectPart + " from provider" + wherePart + " order by id asc limit " + limit;
 	},
 	
 	execute : function(queryString, callback){

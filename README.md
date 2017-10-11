@@ -7,8 +7,11 @@
 
 ## Backend
 * NodeJS + Express for getting things up and running quickly
-* Important component : [queryHandler.js](https://github.com/boris93/bain/blob/master/queryHandler.js).
+* Important component : [queryHandler.js](https://github.com/boris93/bain/blob/master/queryHandler.js)
 * Added support for row-filtering, column-selection and pagination
+### Test
+* .> nodeunit test
+* [queryHandlerTest.js](https://github.com/boris93/bain/blob/master/test/queryHandlerTest.js) tests queryHandler
 
 ## Frontend
 * Bootstrap for building a responsive design quickly  
