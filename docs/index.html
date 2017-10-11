@@ -49,17 +49,18 @@
 					<input class="form-control row-filter" id="state">
 				</div>
 			</div>
+			<div class="row"><div class="col-xs-12 text-left" id=column-selector></div></div>
+			<br />
 			<div class="form-group">
 				<div class="col-xs-offset-6 col-xs-6">
-					<button id=search class="btn btn-default">Submit</button>
+					<button id=search class="btn btn-default btn-success btn-block">Submit</button>
 				</div>
 				<div id=query-display class="col-xs-12">Created query: GET /providers?<span></span></div>
 			</div>
-			<div class="col-xs-12" id=column-selector></div>
 		</form> 
 	</div>
-	<div class="container" id="results">
-		
+	<div class="container-fluid">
+		<table class="table table-striped" id="results"></table>
 	</div>
 </body>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">

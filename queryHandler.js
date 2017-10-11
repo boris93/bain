@@ -5,7 +5,7 @@ const pageSize = 20;
 const columnMapper = {
 	
 	c2dMappings : {
-		'id' : 'id', 
+		'id' : 'Provider ID', 
 		'name' : 'Provider Name',
 		'street' : 'Provider Street Address',
 		'city' : 'Provider City',
@@ -71,7 +71,6 @@ module.exports = {
 			var column = columnMapper.mapDisplayToColumn(key);
 			if(column) selectedColumns.push(column);
 		});
-		selectedColumns.sort();
 		var selectPart = selectedColumns.length > 0 ? selectedColumns.join(',') : "*";
 		
 		var whereClauses = [];
