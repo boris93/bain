@@ -1,1 +1,68 @@
-Hello
+<!doctype html>
+<html>
+<head>
+	<title>Lookup admin</title>
+</head>
+<body>
+	<div class="container-fluid"><br /></div>
+	<div class="container">
+		<form class="form-horizontal" action="javascript:void()">
+			<div class="form-group">
+				<label class="control-label col-xs-6" for="max_discharges">The maximum number of Total Discharges:</label>
+				<div class="col-xs-6">
+					<input class="form-control row-filter" id="max_discharges">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-6" for="min_discharges">The minimum number of Total Discharges:</label>
+				<div class="col-xs-6">
+					<input class="form-control row-filter" id="min_discharges">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-6" for="max_average_covered_charges">The maximum Average Covered Charges:</label>
+				<div class="col-xs-6">
+					<input class="form-control row-filter" id="max_average_covered_charges">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-6" for="min_average_covered_charges">The minimum Average Covered Charges:</label>
+				<div class="col-xs-6">
+					<input class="form-control row-filter" id="min_average_covered_charges">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-6" for="max_average_medicare_payments">The maximum Average Medicare Payment:</label>
+				<div class="col-xs-6">
+					<input class="form-control row-filter" id="max_average_medicare_payments">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-6" for="min_average_medicare_payments">The minimum Average Medicare Payment:</label>
+				<div class="col-xs-6">
+					<input class="form-control row-filter" id="min_average_medicare_payments">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-6" for="state">The exact state that the provider is from:</label>
+				<div class="col-xs-6">
+					<input class="form-control row-filter" id="state">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-xs-offset-6 col-xs-6">
+					<button id=search class="btn btn-default">Submit</button>
+				</div>
+			</div>
+		</form> 
+	</div>
+	<div class="container" id="results">
+		
+	</div>
+</body>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+<script src="script.js" defer></script>
+</html>

@@ -1,5 +1,9 @@
 const express = require('express');
+const cors = require('cors')
 const app = express();
+
+app.use(cors());
+
 const queryHandler = require(__dirname + '/queryHandler');
 
 const PORT = process.env.API_PORT || process.env.PORT || 8080;
